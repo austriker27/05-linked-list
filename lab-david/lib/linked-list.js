@@ -1,6 +1,6 @@
 'use strict';
 
-function LinkedList(){}
+// function LinkedList(){}
 //function LinkedList...
 //vinicio - classes are not hoisted :p
 class LinkedList{
@@ -35,7 +35,7 @@ class LinkedList{
       currentNode = currentNode.next;
     }
     return currentNode;
-    
+
     // if(!(node instanceof LinkedList))
     //   throw new TypeError('<node> should be an instance of LinkedList');
 

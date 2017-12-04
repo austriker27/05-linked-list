@@ -1,6 +1,5 @@
 'use strict';
 
-//vinicio - This is capital L because it's a class
 const LinkedList = require('../lib/linked-list');
 
 describe('linked-list.js',() => {
@@ -28,8 +27,6 @@ describe('linked-list.js',() => {
 
     first.append(second);
     first.append(third);
-    // vinicio - I can do this because I return this at the end of append
-    //first.append(second).append(third);
 
     expect(first.value).toEqual(10);
     expect(first.next.value).toEqual(20);
@@ -50,6 +47,8 @@ describe('linked-list.js',() => {
     let third = new LinkedList(30);
 
     expect(first.find(10).value).toEqual(10);
+    expect(second.find(20).value).toEqual(20);
+    expect(third.find(30).value).toEqual(30);
   });
 
   test('search should find a null value if there is no search results for the search', () => {
@@ -57,7 +56,12 @@ describe('linked-list.js',() => {
     let second = new LinkedList(20);
     let third = new LinkedList(30);
 
-    expect(first.find(100).value).toEqual(null);
+    first.append(second);
+    first.append(third);
+
+    expect(first.find(100).value).toBeNull();
+    expect(second.find(100).value).toBeNull();
+    expect(third.find(100).value).toBeNull();
   });
 
 

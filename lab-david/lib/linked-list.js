@@ -24,8 +24,16 @@ class LinkedList{
   }
 
   //TODO : Homework
-  find(value){
+  find(searchValue){
+    if(!(node instanceof LinkedList))
+      throw new TypeError('<node> should be an instance of LinkedList');
 
+    if(this.node === null)
+      return null;
+    if(this.value === searchValue)
+        return this.value;
+     return this.value;
+    }
   }
 
   //vinicio - remove has( intentionally n_o), a bug. Can you find it?

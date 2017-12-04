@@ -25,12 +25,13 @@ class LinkedList{
 
   //TODO : Homework
   find(value){
-    if(this.node === null)
-      return null;
-    if(this.value === value)
+    if(this.value === value) {
       return this;
-    else
+    } else if (this.node === null) {
+      return null;
+    } else {
       return this.next.find(value);
+    }
   }
 
   //vinicio - remove has( intentionally n_o), a bug. Can you find it?

@@ -49,9 +49,9 @@ describe('linked-list.js',() => {
     let second = new LinkedList(20);
     let third = new LinkedList(30);
 
-    find(10);    
+    // find(10);    
 
-    expect(find.value).toEqual(first);
+    expect(first.find(10).value).toEqual(10);
 
     // expect(find.value(20)).toEqual(second);
     // expect(find.value(30)).toEqual(third);

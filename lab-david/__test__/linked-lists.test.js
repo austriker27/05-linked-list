@@ -44,5 +44,19 @@ describe('linked-list.js',() => {
 
   });
 
+  test('search should find a certain node', () => {
+    let first = new LinkedList(10);
+    let second = new LinkedList(20);
+    let third = new LinkedList(30);
+
+    expect(find.value(10)).toEqual(first);
+    expect(find.value(20)).toEqual(second);
+    expect(find.value(30)).toEqual(third);
+    
+    // expect(first.next.value).toEqual(30);
+    // expect(first.next.next).toEqual(null);
+
+  });
+
 
 });

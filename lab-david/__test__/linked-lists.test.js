@@ -49,16 +49,15 @@ describe('linked-list.js',() => {
     let second = new LinkedList(20);
     let third = new LinkedList(30);
 
-    // find(10);    
-
     expect(first.find(10).value).toEqual(10);
+  });
 
-    // expect(find.value(20)).toEqual(second);
-    // expect(find.value(30)).toEqual(third);
-    
-    // expect(first.next.value).toEqual(30);
-    // expect(first.next.next).toEqual(null);
+  test('search should find a null value if there is no search results for the search', () => {
+    let first = new LinkedList(10);
+    let second = new LinkedList(20);
+    let third = new LinkedList(30);
 
+    expect(first.find(100).value).toEqual(null);
   });
 
 

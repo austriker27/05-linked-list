@@ -25,26 +25,26 @@ class LinkedList{
 
   //TODO : Homework
   find(value){
-    let currentNode = this.head;
+    // let currentNode = this.head;
 
-    while(currentNode) {
-      if(currentNode.value === value) {
-        return currentNode;
-      }
+    // while(currentNode) {
+    //   if(currentNode.value === value) {
+    //     return currentNode;
+    //   }
 
-      currentNode = currentNode.next;
-    }
-    return currentNode;
-
-    // if(!(node instanceof LinkedList))
-    //   throw new TypeError('<node> should be an instance of LinkedList');
-
-    // if(this.node === null)
-    //   return null;
-    // if(this.value === searchValue)
-    //     return this.value;
-    //  return this.value;
+    //   currentNode = currentNode.next;
     // }
+    // return currentNode;
+
+    if(!(node instanceof LinkedList))
+      throw new TypeError('<node> should be an instance of LinkedList');
+
+    if(this.node === null)
+      return null;
+    if(this.value === value)
+      return this;
+    else
+      return this.next.find(value);
   }
 
   //vinicio - remove has( intentionally n_o), a bug. Can you find it?

@@ -24,16 +24,27 @@ class LinkedList{
   }
 
   //TODO : Homework
-  find(searchValue){
-    if(!(node instanceof LinkedList))
-      throw new TypeError('<node> should be an instance of LinkedList');
+  find(value){
+    let currentNode = this.head;
 
-    if(this.node === null)
-      return null;
-    if(this.value === searchValue)
-        return this.value;
-     return this.value;
+    while(currentNode) {
+      if(currentNode.value === value) {
+        return currentNode;
+      }
+
+      currentNode = currentNode.next;
     }
+    return currentNode;
+    
+    // if(!(node instanceof LinkedList))
+    //   throw new TypeError('<node> should be an instance of LinkedList');
+
+    // if(this.node === null)
+    //   return null;
+    // if(this.value === searchValue)
+    //     return this.value;
+    //  return this.value;
+    // }
   }
 
   //vinicio - remove has( intentionally n_o), a bug. Can you find it?

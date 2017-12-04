@@ -59,9 +59,9 @@ describe('linked-list.js',() => {
     first.append(second);
     first.append(third);
 
-    expect(first.find(100).value).toBeNull();
-    expect(second.find(100).value).toBeNull();
-    expect(third.find(100).value).toBeNull();
+    expect(first.find(100)).toEqual(null);
+    expect(second.find(100)).toEqual(null);
+    expect(third.find(100)).toEqual(null);
   });
 
 
